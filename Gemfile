@@ -7,6 +7,8 @@ gem 'rubocop-rails', '~> 2.13', '>= 2.13.2'
 
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
+gem 'rails_admin', '~> 2.2', '>= 2.2.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
 # Use sqlite3 as the database for Active Record
