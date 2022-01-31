@@ -11,32 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+  <div class="field form-group">
+    <% form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Name" %>
+  </div><br>
+
+  <div class="field form-group">
+    <% form.label :email, style: "display: block" %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Email" %>
+  </div><br>
+
+  <div class="field form-group">
+    <% form.label :phone, style: "display: block" %>
+    <%= form.text_field :phone, class: "form-control", placeholder: "Phone" %>
+  </div><br>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+    <% form.label :description, style: "display: block" %>
+    <%= form.text_area :description, class: "form-control", placeholder: "Description" %>
+  </div><br>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+  <div class="field form-group">
+    <% form.label :map, style: "display: block" %>
+    <%= form.text_field :map, class: "form-control", placeholder: "map field" %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :map %>
-    <%= form.text_field :map %>
-  </div>
+  <br>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
