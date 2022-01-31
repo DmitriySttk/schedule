@@ -1,0 +1,13 @@
+<h1>Editing activity</h1>
+
+<%= render "form", activity: @activity %>
+
+<br>
+
+<div>
+  <%= link_to "Show this activity", @activity, class: "btn btn-secondary" %>
+  <%= link_to "Back to activities", activities_path, class: "btn btn-secondary" %>
+  <br><br>
+
+  <%= button_to "Destroy this activity", @activity, method: :delete, class: "btn btn-danger" %>
+</div>

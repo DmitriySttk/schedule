@@ -1,0 +1,31 @@
+
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Description</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @activities.each do |activity| %>
+    <tr>
+      <td><%= activity.name %></td>
+      <td><%= activity.email %></td>
+      <td><%= activity.phone %></td>
+      <td><%= activity.description %></td>
+
+      <td><%= link_to 'Show', activity, class: "btn btn-secondary" %></td>
+      <td><%= link_to 'Edit', edit_activity_path(activity), class: "btn btn-secondary" %></td>
+      <td><%= button_to 'Destroy', activity, method: :delete, class: "btn btn-secondary" %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activity', new_activity_path %>
