@@ -9,6 +9,10 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 
 gem 'rails_admin', '~> 2.2', '>= 2.2.1'
 
+gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
+
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
 # Use sqlite3 as the database for Active Record
