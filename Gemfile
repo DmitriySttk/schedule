@@ -2,13 +2,9 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
-
 gem 'rubocop-rails', '~> 2.13', '>= 2.13.2'
-
 gem 'devise', '~> 4.8', '>= 4.8.1'
-
 gem 'rails_admin', '~> 2.2', '>= 2.2.1'
-
 gem 'activerecord-session_store', '~> 2.0'
 gem 'omniauth', '~> 2.0', '>= 2.0.4'
 gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
