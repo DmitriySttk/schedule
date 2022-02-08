@@ -6,14 +6,13 @@ ruby '3.0.0'
 gem 'rubocop-rails', '~> 2.13', '>= 2.13.2'
 
 gem 'devise', '~> 4.8', '>= 4.8.1'
-
 gem 'rails_admin', '~> 2.2', '>= 2.2.1'
-
 gem 'activerecord-session_store', '~> 2.0'
 gem 'omniauth', '~> 2.0', '>= 2.0.4'
 gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 gem 'omniauth-google-oauth2', '~> 1.0'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
+gem 'pagy', '~> 5.10', '>= 5.10.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
