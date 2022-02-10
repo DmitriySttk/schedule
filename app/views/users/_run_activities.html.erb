@@ -1,0 +1,15 @@
+<div>
+  <%= pluralize(@run_activities.size, 'activity') %>
+  <br>
+  <br>
+  <% if @run_activities.any? %>
+    Signed events:
+    <ul>
+      <% @run_activities.each do |activity| %>
+        <li>
+          <%= link_to activity.name, activity %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

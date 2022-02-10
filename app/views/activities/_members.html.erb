@@ -1,0 +1,15 @@
+<div>
+  <%= pluralize(@members.size, 'registration') %>
+  <br>
+  <br>
+  <% if @members.any? %>
+    Registered members:
+    <ul>
+      <% @members.each do |user| %>
+        <li>
+          <%= user.email %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
