@@ -1,4 +1,4 @@
-<div class="bg-light p-5 rounded-lg m-3">
+<div class="jumbotron jumbotron-fluid">
   <h1 class="display-4"><%= @activity.name %></h1>
   <p class="lead">
     <%= @activity.phone %> |
@@ -7,7 +7,19 @@
   </p>
   <hr class="my-4">
   <p><%= @activity.description %></p>
+  <br>
 
+  <% if current_user %>
+    <% if @current_registration %>
+      <%= button_to "Cancel registration", activity_registration_path(@activity, @current_registration), method: :delete %>
+    <% else %>
+      <%= button_to "Join!", activity_registrations_path(@activity) %>
+    <% end %>
+  <% end %>
+
+  <br>
+  <%= render 'members' %>
+  <br><br>
   <%= link_to "Edit this activity", edit_activity_path(@activity), class: "btn btn-secondary" %>
   <%= link_to "Back to activities", activities_path, class: "btn btn-secondary" %>
   <p></p>
@@ -15,4 +27,7 @@
   <br>
   <%= render 'disqus' %>
 </div>
+
+
+
 

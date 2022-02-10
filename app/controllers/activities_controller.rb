@@ -9,6 +9,10 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1 or /activities/1.json
   def show
+    @members = @activity.members
+    if current_user
+      @current_registration = current_user.registrations.find_by(activity_id: @activity.id)
+    end
   end
 
   # GET /activities/new
