@@ -1,0 +1,15 @@
+ru:
+  navbar:
+    activities: "Услуги"
+    sign_up: "Регистрация"
+    sign_in: "Вход"
+    show_profile: "Профиль"
+    sign_out: "Выход"
+    new: "Новая Услуга"
+    edit_profile: "Настройки"
+    search: "Поиск"
+    download_csv: "Скачать CSV"
+  crud:
+    show: "Показать"
+    edit: "Редактировать"
+    destroy: "Удалить"

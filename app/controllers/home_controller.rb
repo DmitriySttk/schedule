@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     end
   end
 
-  def about
+  def search
   end
 
 end
