@@ -1,6 +1,5 @@
 <h4> <%= @activities.count %>/<%= Activity.count %></h4>
 
-<%#== pagy_nav(@pagy) %>
 <%= link_to_unless_current '5', activities_path(items: 5) %>
 <%= link_to_unless_current '10', activities_path(items: 10) %>
 <%= link_to_unless_current '20', activities_path(items: 20) %>
@@ -26,13 +25,19 @@
       <td><%= activity.description %></td>
 
       <td><%= link_to 'Show', activity, class: "btn btn-secondary" %></td>
-      <td><%= link_to 'Edit', edit_activity_path(activity), class: "btn btn-secondary" %></td>
-      <td><%= button_to 'Destroy', activity, method: :delete, class: "btn btn-secondary" %></td>
+
+      <% if current_user.admin %>
+        <td><%= link_to 'Edit', edit_activity_path(activity), class: "btn btn-secondary" %></td>
+        <td><%= button_to 'Destroy', activity, method: :delete, class: "btn btn-secondary" %></td>
+      <% end %>
     </tr>
   <% end %>
   </tbody>
 </table>
 <br>
-<%= link_to 'New Activity', new_activity_path %>
-
+<% if current_user.admin %>
+  <%= link_to 'New Activity', new_activity_path, class: "btn-link" %>
+<% end %>
+<br>
+<%= link_to "Download CSV", activities_path(format: :csv), class: "btn-link" %>
 

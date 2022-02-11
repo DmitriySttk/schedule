@@ -20,10 +20,13 @@
   <br>
   <%= render 'members' %>
   <br><br>
-  <%= link_to "Edit this activity", edit_activity_path(@activity), class: "btn btn-secondary" %>
+
   <%= link_to "Back to activities", activities_path, class: "btn btn-secondary" %>
   <p></p>
-  <%= button_to "Destroy this activity", @activity, method: :delete, class: "btn btn-danger" %>
+  <% if current_user.admin %>
+    <%= link_to "Edit this activity", edit_activity_path(@activity), class: "btn btn-secondary" %>
+    <%= button_to "Destroy this activity", @activity, method: :delete, class: "btn btn-danger" %>
+  <% end %>
   <br>
   <%= render 'disqus' %>
 </div>
