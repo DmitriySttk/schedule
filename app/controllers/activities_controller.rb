@@ -18,6 +18,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/new
   def new
     @activity = Activity.new
+    authorize @activity
   end
 
   # GET /activities/1/edit
@@ -41,24 +42,27 @@ class ActivitiesController < ApplicationController
 
   # PATCH/PUT /activities/1 or /activities/1.json
   def update
-    respond_to do |format|
-      if @activity.update(activity_params)
-        format.html { redirect_to activity_url(@activity), notice: "Activity was successfully updated." }
-        format.json { render :show, status: :ok, location: @activity }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @activity.errors, status: :unprocessable_entity }
+    if authorize @activity
+      respond_to do |format|
+        if @activity.update(activity_params)
+          format.html { redirect_to activity_url(@activity), notice: "Activity was successfully updated." }
+          format.json { render :show, status: :ok, location: @activity }
+        else
+          format.html { render :edit, status: :unprocessable_entity }
+          format.json { render json: @activity.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
 
   # DELETE /activities/1 or /activities/1.json
   def destroy
-    @activity.destroy
-
-    respond_to do |format|
-      format.html { redirect_to activities_url, notice: "Activity was successfully destroyed." }
-      format.json { head :no_content }
+    if authorize @activity
+      @activity.destroy
+      respond_to do |format|
+        format.html { redirect_to activities_url, notice: "Activity was successfully destroyed." }
+        format.json { head :no_content }
+      end
     end
   end
 
