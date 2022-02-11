@@ -5,6 +5,10 @@ class ActivitiesController < ApplicationController
   # GET /activities or /activities.json
   def index
     @pagy, @activities = pagy(Activity.all)
+    respond_to do |format|
+      format.html
+      format.csv { send_data Activity.to_csv, filename: "users-#{Date.today}.csv" }
+    end
   end
 
   # GET /activities/1 or /activities/1.json
@@ -14,6 +18,7 @@ class ActivitiesController < ApplicationController
       @current_registration = current_user.registrations.find_by(activity_id: @activity.id)
     end
   end
+
 
   # GET /activities/new
   def new
