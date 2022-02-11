@@ -14,4 +14,20 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0, 20]
     end
   end
+
+  def self.to_csv
+    attributes = %w[id email]
+
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+
+      all.each do |user|
+        csv << attributes.map { |attr| user.send(attr) }
+      end
+    end
+  end
+
+  def name
+    "#{id} #{email}"
+  end
 end
