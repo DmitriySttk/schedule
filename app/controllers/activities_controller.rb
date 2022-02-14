@@ -4,10 +4,12 @@ class ActivitiesController < ApplicationController
 
   # GET /activities or /activities.json
   def index
-    @pagy, @activities = pagy(Activity.all)
+    @q = Activity.ransack(params[:q])
+    @pagy, @activities = pagy(@q.result)
+
     respond_to do |format|
       format.html
-      format.csv { send_data Activity.to_csv, filename: "users-#{Date.today}.csv" }
+      format.csv { send_data Activity.to_csv, filename: "activities-#{Date.today}.csv" }
     end
   end
 

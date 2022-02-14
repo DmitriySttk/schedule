@@ -1,10 +1,13 @@
-<h4> <%= @activities.count %>/<%= Activity.count %></h4>
+<p> <%= @activities.count %>/<%= Activity.count %></p>
 
 <%= link_to_unless_current '5', activities_path(items: 5) %>
 <%= link_to_unless_current '10', activities_path(items: 10) %>
 <%= link_to_unless_current '20', activities_path(items: 20) %>
 <%== pagy_bootstrap_nav(@pagy) %>
 
+<%= render 'search_form' %>
+
+<br/>
 <table class="table table-striped table-bordered">
   <thead class="table-dark">
   <tr>
