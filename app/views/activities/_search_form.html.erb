@@ -1,0 +1,8 @@
+<%= search_form_for @q do |f| %>
+  <%= f.label t('search') %>
+  <br>
+  <%= f.search_field :name_cont %>
+  <%= f.submit %>
+<% end %>
+
+<!--, url: home_search_path-->

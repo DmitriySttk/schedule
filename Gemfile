@@ -15,6 +15,7 @@ gem 'omniauth-rails_csrf_protection', '~> 1.0'
 gem 'pagy', '~> 5.10', '>= 5.10.1'
 gem 'pundit', '~> 2.1', '>= 2.1.1'
 gem 'rails-i18n', '~> 7.0', '>= 7.0.1'
+gem 'ransack', '~> 2.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
