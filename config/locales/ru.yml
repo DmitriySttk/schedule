@@ -1,4 +1,6 @@
 ru:
+  en: "Английский"
+  ru: "Русский"
   navbar:
     activities: "Услуги"
     sign_up: "Регистрация"
@@ -13,3 +15,8 @@ ru:
     show: "Показать"
     edit: "Редактировать"
     destroy: "Удалить"
+  table:
+    name: "Имя"
+    email: "Email"
+    phone: "Телефон"
+    description: "Описание"
