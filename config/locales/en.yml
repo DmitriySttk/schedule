@@ -30,4 +30,25 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  en: "English"
+  ru: "Russian"
+  navbar:
+    activities: "Activities"
+    sign_up: "Sign Up"
+    sign_in: "Sign In"
+    show_profile: "Show Profile"
+    sign_out: "Sign Out"
+    new: "New"
+    edit_profile: "Edit Profile"
+    search: "Search"
+    download_csv: "Download CSV"
+  crud:
+    show: "Show"
+    edit: "Edit"
+    destroy: "Delete"
+  table:
+    name: "Name"
+    email: "Email"
+    phone: "Phone"
+    description: "Description"
+
