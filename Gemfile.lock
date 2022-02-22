@@ -79,6 +79,8 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    airbrake-ruby (6.0.2)
+      rbtree3 (~> 0.5)
     ast (2.4.2)
     bcrypt (3.1.16)
     bindex (0.8.1)
@@ -264,6 +266,7 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rbtree3 (0.7.0)
     regexp_parser (2.2.0)
     remotipart (1.4.4)
     responders (3.0.1)
@@ -337,6 +340,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-session_store (~> 2.0)
+  airbrake-ruby
   bootsnap (>= 1.4.4)
   byebug
   devise (~> 4.8, >= 4.8.1)

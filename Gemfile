@@ -16,6 +16,7 @@ gem 'pagy', '~> 5.10', '>= 5.10.1'
 gem 'pundit', '~> 2.1', '>= 2.1.1'
 gem 'rails-i18n', '~> 7.0', '>= 7.0.1'
 gem 'ransack', '~> 2.5'
+gem 'airbrake-ruby'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'

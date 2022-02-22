@@ -14,11 +14,17 @@ require 'action_text/engine'
 require 'action_view/railtie'
 require 'action_cable/engine'
 require 'sprockets/railtie'
+require 'airbrake-ruby'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
+Airbrake.configure do |c|
+  c.project_id = 398246
+  c.project_key = '6ef94f8b2faf6535dc8522de6ba2721d'
+end
 
 module Schedule
   class Application < Rails::Application
